@@ -14,13 +14,14 @@
 @section('content')
 <div class="box">
     <div class="box-header">
-        <a href="" class="btn btn-primary"><span class="fa fa-cart-plus"> Depositar</span></a>
+        <a href="{{ route('balance.deposit') }}" class="btn btn-success"><span class="fa fa-cart-plus"> Depositar</span></a>
         <a href="" class="btn btn-danger"><span class="fa fa-cart-arrow-down"> Sacar</span></a>
+        <a href="" class="btn btn-warning"><span class="fa fa-exchange"> Transferir</span></a>
     </div>
     <div class="box-body">
         <div class="small-box bg-aqua-gradient">
             <div class="inner">
-                <h3>R$ 8.230,00</h3>
+                <h3>R$ {{ number_format($amount, 2, ',', '.') }}</h3>
                 <p>O saldo poderá ser alterado no decorrer do dia de acordo com suas transações diárias</p>
             </div>
             <div class="icon">
